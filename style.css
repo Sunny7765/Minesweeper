@@ -37,4 +37,6 @@ body {
     height: 24pt;
     text-align: center;
     align-items: center;
+    color: white;
+    user-select: none;
 }

@@ -1,4 +1,5 @@
 const gameBox = document.getElementsByClassName("gameBox");
+const ending = document.getElementsByClassName("ending");
 let rows = document.getElementsByClassName("gridColumn");
 let cells = document.getElementsByClassName("cell");
 
@@ -20,16 +21,17 @@ function makeRows(rowNum) {
 }
 
 function makeColumns(cellNum) {
-    for (j = 0; j < rows.length; j++) {
-        for (k = 0; k < cellNum; k++) {
+    for (i = 0; i < rows.length; i++) {
+        for (j = 0; j < cellNum; j++) {
             let newCell = document.createElement("div");
             newCell.addEventListener("click", function() {
                 if (newCell.textContent === "*") {
                     newCell.style.backgroundColor = "red";
+                    gameOver();
                 }
                 else newCell.style.backgroundColor = "lime";
             })
-            rows[k].appendChild(newCell).className = "cell";
+            rows[j].appendChild(newCell).className = "cell";
         }
     }
 }
@@ -92,10 +94,12 @@ function neighbor(currentIndex, searchIndex) {
         return 1;
     }
     return 0; 
-        
-    
+}
+
+function gameOver() {
+
 }
 
 defaultGrid();
-makeMines(80);
+makeMines(40);
 cellNum();
