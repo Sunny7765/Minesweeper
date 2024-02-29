@@ -1,0 +1,34 @@
+body {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameTitle {
+    justify-content: center;
+    display: flex;
+    color: red;
+    flex: 1 1 auto;
+    margin-bottom: 5%;
+    font-size: 200%;
+}
+
+.gameBox {
+    justify-content: center;
+    display: flex;
+    flex: 1 1 auto;
+    border: 1px solid black;
+    height: 60vh;
+    width: 60vh;
+    margin: auto;
+}
+
+.gridRow {
+    display: grid;
+    border: 0.1px solid black;
+    width: 50%;
+}
+
+.cell {
+    border: .1px solid black;
+}
