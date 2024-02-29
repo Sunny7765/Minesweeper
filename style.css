@@ -18,12 +18,13 @@ body {
     display: flex;
     flex: 1 1 auto;
     border: 1px solid black;
-    height: 60vh;
-    width: 60vh;
+    height: flex;
+    width: 50cap;
     margin: auto;
+    contain:inherit;
 }
 
-.gridRow {
+.gridColumn {
     display: grid;
     border: 0.1px solid black;
     width: 50%;
@@ -31,4 +32,9 @@ body {
 
 .cell {
     border: .1px solid black;
+    justify-content: center;
+    display: flex;
+    height: 24pt;
+    text-align: center;
+    align-items: center;
 }
